@@ -1,0 +1,401 @@
+/* ------------------ GERAL ------------------ */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --preto: #000000;
+  --branco: #f0f0d8;
+  --cinza: #666666;
+  --azulclaro: #b4debe;
+  --azulmedio: #77cca4;
+  --azulescuromedio: #133242;
+  --azulescuro: #0e2430;
+  --verdeclaro: #b4df37;
+}
+
+/* ------------------ TAGS GERAIS ------------------ */
+
+body {
+  overflow-x: hidden;
+  color: var(--branco);
+  background-color: var(--azulescuro);
+}
+
+a {
+  color: var(--azulclaro);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 0.6;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  background: var(--azulescuro);
+  height: 10vh;
+}
+
+div.logoss {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* ------------------ CLASSES ------------------ */
+
+.nav-list {
+  list-style: none;
+  display: flex;
+}
+
+.nav-list li {
+  letter-spacing: 1px;
+  margin-left: 32px;
+  z-index: 1;
+}
+
+.mobile-menu {
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu div {
+  width: 32px;
+  height: 2px;
+  margin: 8px;
+  background: var(--azulclaro);
+  transition: 0.3s;
+}
+
+@media (max-width: 1000px) {
+  .nav-list {
+    position: absolute;
+    top: 10vh;
+    right: 0;
+    width: 50vw;
+    height: 90vh;
+    background: var(--azulescuro);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: transform 0.3s ease-in;
+    z-index: 3;
+    opacity: 0;
+  }
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+  .mobile-menu {
+    display: block;
+  }
+  .nav-list.active {
+    opacity: 100%;
+    transition: 0.3s ease-in;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+.videobg {
+  position: relative;
+  height: 90vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.videobg video {
+  z-index: -1;
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.filterbg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  width: 100vw;
+  background-color: var(--preto);
+  opacity: 30%;
+}
+
+.logo {
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.title {
+  padding-top: 50px;
+  font-size: 3rem;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 4rem;
+  text-align: center;
+  margin: 30px;
+  font-family: "Ms Madi", cursive;
+  color: var(--azulclaro);
+}
+
+.contentmain {
+  position: absolute;
+  left: 7vw;
+  right: 7vw;
+  background-color: var(--azulescuromedio);
+  padding: 15px;
+}
+
+.aboutsection {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqtitle {
+  text-align: center;
+  margin: 5vh;
+  font-size: 1.5em;
+}
+
+.faqp {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.contacttitle {
+  margin-top: 10vh;
+}
+
+/* ------------------ ID'S ------------------ */
+
+#navbar {
+  z-index: 10;
+}
+
+#brandname {
+  z-index: 2;
+  color: var(--azulclaro);
+  position: absolute;
+  text-align: center;
+  max-width: 400px;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Ms Madi", cursive;
+  font-size: 3em;
+}
+
+@media (max-width: 1000px) {
+  #brandname {
+    font-size: 2em;
+  }
+}
+
+#formcontato {
+  text-align: center;
+}
+
+#formlabelname {
+  letter-spacing: 1px;
+  font-size: 1.25em;
+}
+
+#formname {
+  color: var(--branco);
+  background-color: var(--azulescuromedio);
+  border: var(--azulescuro) 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#formlabelemail {
+  letter-spacing: 1px;
+  font-size: 1.25em;
+}
+
+#formemail {
+  color: var(--branco);
+  background-color: var(--azulescuromedio);
+  border: var(--azulescuro) 2px solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#formtitle {
+  letter-spacing: 0.5px;
+  font-size: 1.3em;
+}
+
+#formtextbox {
+  width: 30vw;
+  height: 50vh;
+  resize: none;
+  color: var(--branco);
+  background-color: var(--azulescuromedio);
+  border: var(--azulescuro) 2px solid;
+  border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+  #formtextbox {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+#formsendbt {
+  background-color: var(--azulescuromedio);
+  border: var(--azulescuro) 2px solid;
+  padding: 7px;
+  color: var(--branco);
+  border-radius: 10px;
+  letter-spacing: 1px;
+}
+
+#formsendbt:hover {
+  background-color: var(--azulescuro);
+}
+
+#linkinline {
+  font-size: 1.1em;
+  font-family: "Open Sans", sans-serif;
+  color: var(--azulmedio);
+}
+
+#fixedlogo {
+  position: fixed;
+  top: 0;
+  left: 1vw;
+  width: 5vw;
+  height: 9.8vh;
+  z-index: 15;
+}
+
+@media (max-width: 1000px) {
+  #fixedlogo {
+    display: none;
+  }
+}
+
+#centerimg {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#temaimg {
+  width: 200px;
+}
+
+#ideiaimg {
+  width: 100px;
+  padding-bottom: 10px;
+}
+
+#textoprojeto {
+  text-align: center;
+  padding: 0 20px;
+  font-family: "Open Sans", sans-serif;
+}
+
+#subtitletexto {
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+#linhadivisoria {
+  position: absolute;
+  top: 10;
+  left: 0;
+  background-color: var(--azulmedio);
+  height: 5px;
+  width: 100vw;
+  z-index: 3;
+}
+
+#linhadivmain {
+  position: absolute;
+  left: 5vw;
+  background-color: var(--azulmedio);
+  height: 5px;
+  width: 75vw;
+  z-index: 3;
+}
+
+@media (max-width: 1000px) {
+  .subtitleresize {
+    font-size: 3rem;
+  }
+}
+
+#teamseaslogo {
+  width: 20vw;
+}
+
+/* ------------------ Scrollbar ------------------ */
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #77cca4 #0e2430;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 15px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0e2430;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #77cca4;
+  border-radius: 10px;
+  border: 2px solid #0e2430;
+}

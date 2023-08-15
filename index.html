@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ------------ FONT IMPORT ------------ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ------------ END FONT IMPORT ------------  -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <title>Save The Sea</title>
+  </head>
+
+  <body>
+    <header>
+      <a name="top"></a>
+      <a href="#top"
+        ><img id="fixedlogo" src="./imagens/fixedlogo.png" alt="LogoSS"
+      /></a>
+      <nav id="navbar">
+        <a class="logo" href="./index.html">Save The Sea</a>
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+          <li class="active"><a href="./index.html">Início</a></li>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#contact">Contato</a></li>
+          <li><a href="./pages/project.html">Projeto</a></li>
+          <div class="animli"></div>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="content">
+      <div class="contentfp">
+        <h1 id="brandname">Save The Sea</h1>
+      </div>
+      <div class="logoss">
+        <img src="./imagens/logo.png" alt="LogoSS" />
+      </div>
+      <div class="videobg">
+        <div class="filterbg"></div>
+        <video autoplay loop muted>
+          <source src="./videos/background.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="contentmain">
+        <a name="about"></a>
+        <h2 class="subtitle">Sobre Nós</h2>
+        <div class="aboutsection">
+          <div class="faq">
+            <h3 class="faqtitle">Quem somos?</h3>
+            <p class="faqp">
+              A Save The Sea é um projeto que teve a iniciativa para um trabalho
+              de faculdade na UNIP, e acabou se tornando um projeto que
+              realmente quer fazer a diferença para o meio ambiente, tornando as
+              condições dos oceanos, mares e rios melhores.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faqtitle">Qual o propósito?</h3>
+            <p class="faqp">
+              A inteção por trás deste projeto é espalhar informações sobre
+              alguns dos problemas graves que afetam todas as grandes porções de
+              água no mundo e ajudar a soluciona-los através de variados
+              métodos.
+            </p>
+          </div>
+          <div class="faq">
+            <h3 class="faqtitle">Como Ajudar?</h3>
+            <p class="faqp">
+              Para ajudar acesse nossa página que falamos sobre o
+              <a id="linkinline" href="./pages/project.html">Projeto</a>, que é
+              onde deixamos claro de que maneira você pode participar e ajudar e
+              também esclarecemos todas as inteções do projeto Save The Sea.
+            </p>
+          </div>
+        </div>
+        <a name="contact"></a>
+        <h2 class="subtitle contacttitle">Contato</h2>
+        <form id="formcontato">
+          <label id="formlabelname">Nome: </label>
+          <input type="text" id="formname" placeholder="Seu Nome" / size="30">
+          <br /><br />
+          <label id="formlabelemail">E-mail:</label>
+          <input
+            id="formemail"
+            type="email"
+            placeholder=" Seu E-mail "
+            size="30"
+          />
+          <br /><br />
+          <h3 id="formtitle">Deixe-nos uma mensagem</h3>
+          <br />
+          <textarea
+            name="Mensagem"
+            id="formtextbox"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <br />
+          <input
+            id="formsendbt"
+            type="button"
+            name="enviar"
+            value="Enviar"
+            onclick="alert('Enviado com Sucesso')"
+          />
+        </form>
+      </div>
+    </main>
+
+    <script src="./js/mobilenavbar.js"></script>
+  </body>
+</html>
